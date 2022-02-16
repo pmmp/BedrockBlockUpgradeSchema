@@ -21,3 +21,11 @@ It has the following advantages which make it desirable:
 - tiny footprint - the schemas can be added to a binary with almost no noticeable increase in size after compression
 
 [^1]: Amended by hand in some cases, due to errors in Bedrock's own blockstate upgrader
+
+## Generation
+
+First, you need to get a `.bin` mapping file, which you can obtain using the current version of BDS + [pmmp/mapping mod](https://github.com/pmmp/mapping). It requires that you place the palette for the previous version in `input_files/old_block_palettes`.
+
+The output file will be placed in `mapping_files/old_palette_mappings`. This file is then provided as the input for the [schema generator script](https://github.com/pmmp/PocketMine-MP/blob/e98cf39b47c6c37619cae32d2d2596b08f4d938f/tools/generate-blockstate-upgrade-schema.php), which produces the JSON schemas like the ones you see in this repo.
+
+Currently the code needed for this is baked into an experimental branch of PocketMine-MP; it's planned to separate it into its own library in the future.
