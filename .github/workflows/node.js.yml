@@ -1,0 +1,30 @@
+name: Validate NBT upgrade schemas
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Node.js
+      uses: actions/setup-node@v2
+      with:
+        cache: 'npm'
+
+    - name: Install ajv-cli
+      run: npm install ajv-cli
+
+    - name: Validate NBT upgrade schemas
+      run: |
+        exit_code=0
+
+        for i in $(ls nbt_upgrade_schema); do
+          ajv validate --allow-union-types -s nbt_upgrade_schema_schema.json -d nbt_upgrade_schema/$i || exit_code=1
+        done
+
+        exit $exit_code
