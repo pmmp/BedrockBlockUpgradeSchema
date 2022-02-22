@@ -15,7 +15,7 @@ jobs:
       uses: actions/setup-node@v2
 
     - name: Install ajv-cli
-      run: npm install ajv-cli
+      run: npm install -g ajv-cli
 
     - name: Validate NBT upgrade schemas
       run: |
