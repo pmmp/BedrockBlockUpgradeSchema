@@ -1,5 +1,5 @@
 {
-    "name": "pocketmine/block-upgrade-schema",
+    "name": "pocketmine/bedrock-block-upgrade-schema",
     "description": "Schemas describing how to upgrade saved block data in older Minecraft: Bedrock Edition world saves",
     "type": "library",
     "license": "CC0-1.0",
