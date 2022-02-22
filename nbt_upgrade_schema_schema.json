@@ -24,19 +24,19 @@
 	"properties": {
 		"maxVersionMajor": {
 			"type": "integer",
-			"minValue": 0
+			"minimum": 0
 		},
 		"maxVersionMinor": {
 			"type": "integer",
-			"minValue": 0
+			"minimum": 0
 		},
 		"maxVersionPatch": {
 			"type": "integer",
-			"minValue": 0
+			"minimum": 0
 		},
 		"maxVersionRevision": {
 			"type": "integer",
-			"minValue": 0
+			"minimum": 0
 		},
 		"renamedIds": {
 			"type": "object",
