@@ -19,5 +19,8 @@
                 "string": "y"
             }
         }
+    },
+    "renamedIds": {
+        "minecraft:frog_egg": "minecraft:frog_spawn"
     }
 }
