@@ -668,7 +668,7 @@
         "facing_direction_00": [
             {
                 "old": {
-                    "int": 6
+                    "int": 0
                 },
                 "new": {
                     "int": 2
@@ -676,7 +676,39 @@
             },
             {
                 "old": {
+                    "int": 1
+                },
+                "new": {
+                    "int": 2
+                }
+            },
+            {
+                "old": {
+                    "int": 3
+                },
+                "new": {
                     "int": 0
+                }
+            },
+            {
+                "old": {
+                    "int": 4
+                },
+                "new": {
+                    "int": 1
+                }
+            },
+            {
+                "old": {
+                    "int": 5
+                },
+                "new": {
+                    "int": 3
+                }
+            },
+            {
+                "old": {
+                    "int": 6
                 },
                 "new": {
                     "int": 2
