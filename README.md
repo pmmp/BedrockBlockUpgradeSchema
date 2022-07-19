@@ -1,6 +1,40 @@
 # BlockStateUpgradeSchema
 (Mostly) auto-generated schemas for upgrading blockstates found in older Minecraft: Bedrock worlds
 
+## Contents
+### `nbt_upgrade_schema/*.json`
+These schemas describe how to upgrade blockstate NBT from one version to the next. The structure of the schema is described in `nbt_upgrade_schema_schema.json`. An example implementation can be seen [in PocketMine-MP 5.0.0-ALPHA2](https://github.com/pmmp/PocketMine-MP/blob/ccb3c3cb05e6eee8afa15d7837e256a446244fe7/src/data/bedrock/block/upgrade/BlockStateUpgrader.php#L33).
+
+#### Gotchas
+- Mojang don't always bump the format version when making backwards-incompatible changes. A prominent example of this is in the [`0131_1.18.20.27_beta_to_1.18.30.json`](/nbt_upgrade_schema/0131_1.18.20.27_beta_to_1.18.30.json).
+- `remappedPropertyValues` always uses the old property name, if the names were changed.
+
+### `block_legacy_id_map.json`
+This JSON file contains a mapping of string ID -> legacy ID for all blocks known up 1.16.0.
+
+Technically, you'd only need everything up to 1.2.13, but the excess might be handy in some cases.
+
+### `1.12.0_to_1.18.10_blockstate_map.bin`
+This binary file contains a mapping of all known valid 1.12.0 block ID/meta combinations to their corresponding blockstate NBTs as of 1.18.10.
+
+#### Schema
+The following structure is repeated until EOF. There is **no** length prefix, so you have to read to EOF to read all the mappings.
+
+| type | description |
+|------|-------------|
+| unsigned varint32 | 1.12 block string ID length |
+| byte[] | 1.12 block string ID |
+| little-endian int16 | 1.12 block metadata |
+| TAG_Compound (varint format) | 1.18.10 NBT blockstate corresponding to the given 1.12 block. Varint NBT uses `uvarint32` for strings (tag names and `TAG_String` values), `svarint32` for `TAG_Int`/`TAG_IntArray`, and `svarint64` for `TAG_Long`. (I recognize this is inconvenient for parsing, but it was the easiest way to dump the data from BDS. I may change the format in the future.) |
+
+## Generating NBT upgrade schemas for new versions
+
+First, you need to get a `.bin` mapping file, which you can obtain using the current version of BDS + [pmmp/mapping mod](https://github.com/pmmp/mapping). It requires that you place the palette for the previous version in `input_files/old_block_palettes`.
+
+The output file will be placed in `mapping_files/old_palette_mappings`. This file is then provided as the input for the [schema generator script](https://github.com/pmmp/PocketMine-MP/blob/e98cf39b47c6c37619cae32d2d2596b08f4d938f/tools/generate-blockstate-upgrade-schema.php), which produces the JSON schemas like the ones you see in this repo.
+
+Currently the code needed for this is baked into an experimental branch of PocketMine-MP; it's planned to separate it into its own library in the future.
+
 ## Background
 
 Since Minecraft Bedrock doesn't auto-upgrade terrain or inventories unless they've been loaded during a game session, any software that supports Minecraft Bedrock worlds has to accommodate all of the old blockstates all the way back to the first versions that used them, and many backwards-incompatible changes were made since then.
@@ -21,11 +55,3 @@ It has the following advantages which make it desirable:
 - tiny footprint - the schemas can be added to a binary with almost no noticeable increase in size after compression
 
 [^1]: Amended by hand in some cases, due to errors in Bedrock's own blockstate upgrader
-
-## Generation
-
-First, you need to get a `.bin` mapping file, which you can obtain using the current version of BDS + [pmmp/mapping mod](https://github.com/pmmp/mapping). It requires that you place the palette for the previous version in `input_files/old_block_palettes`.
-
-The output file will be placed in `mapping_files/old_palette_mappings`. This file is then provided as the input for the [schema generator script](https://github.com/pmmp/PocketMine-MP/blob/e98cf39b47c6c37619cae32d2d2596b08f4d938f/tools/generate-blockstate-upgrade-schema.php), which produces the JSON schemas like the ones you see in this repo.
-
-Currently the code needed for this is baked into an experimental branch of PocketMine-MP; it's planned to separate it into its own library in the future.
