@@ -18,14 +18,16 @@ Technically, you'd only need everything up to 1.2.13, but the excess might be ha
 This binary file contains a mapping of all known valid 1.12.0 block ID/meta combinations to their corresponding blockstate NBTs as of 1.18.10.
 
 #### Schema
-The following structure is repeated until EOF. There is **no** length prefix, so you have to read to EOF to read all the mappings.
+The file is structured as described below.
 
 | type | description |
 |------|-------------|
-| unsigned varint32 | 1.12 block string ID length |
-| byte[] | 1.12 block string ID |
-| little-endian int16 | 1.12 block metadata |
-| TAG_Compound (varint format) | 1.18.10 NBT blockstate corresponding to the given 1.12 block. Varint NBT uses `uvarint32` for strings (tag names and `TAG_String` values), `svarint32` for `TAG_Int`/`TAG_IntArray`, and `svarint64` for `TAG_Long`. (I recognize this is inconvenient for parsing, but it was the easiest way to dump the data from BDS. I may change the format in the future.) |
+| unsigned varint32 | Number of entries |
+|     - unsigned varint32 | 1.12 block string ID length |
+|     - byte[] | 1.12 block string ID |
+|     - unsigned varint32 | Number of meta -> blockstate pairings |
+|         - unsigned varint32 | Meta value |
+|         - TAG_Compound (standard little-endian) | 1.18.10 NBT blockstate corresponding to the current ID and meta pair from 1.12. |
 
 ## Generating NBT upgrade schemas for new versions
 
