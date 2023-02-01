@@ -20,14 +20,12 @@ This binary file contains a mapping of all known valid 1.12.0 block ID/meta comb
 #### Schema
 The file is structured as described below.
 
-| type | description |
-|------|-------------|
-| unsigned varint32 | Number of entries |
-|     - unsigned varint32 | 1.12 block string ID length |
-|     - byte[] | 1.12 block string ID |
-|     - unsigned varint32 | Number of meta -> blockstate pairings |
-|         - unsigned varint32 | Meta value |
-|         - TAG_Compound (standard little-endian) | 1.18.10 NBT blockstate corresponding to the current ID and meta pair from 1.12. |
+- unsigned varint32 - Number of entries
+  - unsigned varint32 - 1.12 block string ID length
+  - byte[] - 1.12 block string ID
+  - unsigned varint32 - Number of meta -> blockstate pairings
+    - unsigned varint32 - Meta value
+    - TAG_Compound (standard little-endian) - 1.18.10 NBT blockstate corresponding to the current ID and meta pair from 1.12.
 
 ## Generating NBT upgrade schemas for new versions
 
