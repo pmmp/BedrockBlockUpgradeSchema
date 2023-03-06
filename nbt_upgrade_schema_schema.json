@@ -111,7 +111,8 @@
 					"type": "object",
 					"properties": {
 						"oldState": {
-							"type": "object",
+							"type": ["object", "array"],
+							"maxItems": 0,
 							"additionalProperties": {
 								"$ref": "#/$defs/blockStateProperty"
 							}
@@ -120,7 +121,8 @@
 							"type": "string"
 						},
 						"newState": {
-							"type": "object",
+							"type": ["object", "array"],
+							"maxItems": 0,
 							"additionalProperties": {
 								"$ref": "#/$defs/blockStateProperty"
 							}
