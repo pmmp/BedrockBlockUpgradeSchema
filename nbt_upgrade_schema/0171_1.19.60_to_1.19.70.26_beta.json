@@ -12,7 +12,7 @@
                     }
                 },
                 "newName": "minecraft:white_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -21,7 +21,7 @@
                     }
                 },
                 "newName": "minecraft:orange_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -30,7 +30,7 @@
                     }
                 },
                 "newName": "minecraft:magenta_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -39,7 +39,7 @@
                     }
                 },
                 "newName": "minecraft:light_blue_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -48,7 +48,7 @@
                     }
                 },
                 "newName": "minecraft:yellow_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -57,7 +57,7 @@
                     }
                 },
                 "newName": "minecraft:lime_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -66,7 +66,7 @@
                     }
                 },
                 "newName": "minecraft:pink_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -75,7 +75,7 @@
                     }
                 },
                 "newName": "minecraft:gray_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -84,7 +84,7 @@
                     }
                 },
                 "newName": "minecraft:light_gray_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -93,7 +93,7 @@
                     }
                 },
                 "newName": "minecraft:cyan_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -102,7 +102,7 @@
                     }
                 },
                 "newName": "minecraft:purple_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -111,7 +111,7 @@
                     }
                 },
                 "newName": "minecraft:blue_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -120,7 +120,7 @@
                     }
                 },
                 "newName": "minecraft:brown_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -129,7 +129,7 @@
                     }
                 },
                 "newName": "minecraft:green_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -138,7 +138,7 @@
                     }
                 },
                 "newName": "minecraft:red_wool",
-                "newState": []
+                "newState": null
             },
             {
                 "oldState": {
@@ -147,7 +147,7 @@
                     }
                 },
                 "newName": "minecraft:black_wool",
-                "newState": []
+                "newState": null
             }
         ]
     }
