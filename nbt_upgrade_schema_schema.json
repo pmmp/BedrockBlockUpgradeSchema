@@ -124,6 +124,12 @@
 							"additionalProperties": {
 								"$ref": "#/$defs/blockStateProperty"
 							}
+						},
+						"copiedState": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
 						}
 					}
 				}
