@@ -3,6 +3,9 @@
     "maxVersionMinor": 18,
     "maxVersionPatch": 10,
     "maxVersionRevision": 1,
+    "renamedIds": {
+        "minecraft:frog_egg": "minecraft:frog_spawn"
+    },
     "addedProperties": {
         "minecraft:ochre_froglight": {
             "pillar_axis": {
@@ -19,8 +22,5 @@
                 "string": "y"
             }
         }
-    },
-    "renamedIds": {
-        "minecraft:frog_egg": "minecraft:frog_spawn"
     }
 }

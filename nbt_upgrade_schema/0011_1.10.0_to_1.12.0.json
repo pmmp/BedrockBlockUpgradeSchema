@@ -57,24 +57,6 @@
         }
     },
     "remappedPropertyValuesIndex": {
-        "facing_direction_00": [
-            {
-                "old": {
-                    "int": 7
-                },
-                "new": {
-                    "int": 0
-                }
-            },
-            {
-                "old": {
-                    "int": 6
-                },
-                "new": {
-                    "int": 0
-                }
-            }
-        ],
         "direction_01": [
             {
                 "old": {
@@ -98,6 +80,24 @@
                 },
                 "new": {
                     "int": 5
+                }
+            }
+        ],
+        "facing_direction_00": [
+            {
+                "old": {
+                    "int": 6
+                },
+                "new": {
+                    "int": 0
+                }
+            },
+            {
+                "old": {
+                    "int": 7
+                },
+                "new": {
+                    "int": 0
                 }
             }
         ]

@@ -47,7 +47,7 @@
             },
             {
                 "old": {
-                    "string": "polished_blackstone_brick"
+                    "string": "polished_blackstone"
                 },
                 "new": {
                     "string": "cobblestone"
@@ -55,7 +55,7 @@
             },
             {
                 "old": {
-                    "string": "polished_blackstone"
+                    "string": "polished_blackstone_brick"
                 },
                 "new": {
                     "string": "cobblestone"
