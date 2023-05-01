@@ -67,7 +67,7 @@
             "facing_direction": "facing_direction_00"
         },
         "minecraft:activator_rail": {
-            "rail_direction": "facing_direction_00"
+            "rail_direction": "rail_direction_00"
         },
         "minecraft:barrel": {
             "facing_direction": "facing_direction_00"
@@ -88,16 +88,16 @@
             "facing_direction": "facing_direction_00"
         },
         "minecraft:bone_block": {
-            "direction": "direction_01"
+            "direction": "direction_00"
         },
         "minecraft:brown_glazed_terracotta": {
             "facing_direction": "facing_direction_00"
         },
         "minecraft:cake": {
-            "bite_counter": "bite_counter_02"
+            "bite_counter": "bite_counter_00"
         },
         "minecraft:cauldron": {
-            "fill_level": "fill_level_03"
+            "fill_level": "fill_level_00"
         },
         "minecraft:chain_command_block": {
             "facing_direction": "facing_direction_00"
@@ -106,16 +106,16 @@
             "facing_direction": "facing_direction_00"
         },
         "minecraft:chorus_flower": {
-            "age": "facing_direction_00"
+            "age": "age_00"
         },
         "minecraft:cocoa": {
-            "age": "age_04"
+            "age": "age_01"
         },
         "minecraft:command_block": {
             "facing_direction": "facing_direction_00"
         },
         "minecraft:composter": {
-            "composter_fill_level": "composter_fill_level_05"
+            "composter_fill_level": "composter_fill_level_00"
         },
         "minecraft:cyan_glazed_terracotta": {
             "facing_direction": "facing_direction_00"
@@ -127,7 +127,7 @@
             "facing_direction": "facing_direction_00"
         },
         "minecraft:detector_rail": {
-            "rail_direction": "facing_direction_00"
+            "rail_direction": "rail_direction_00"
         },
         "minecraft:dispenser": {
             "facing_direction": "facing_direction_00"
@@ -139,13 +139,13 @@
             "facing_direction": "facing_direction_00"
         },
         "minecraft:frame": {
-            "weirdo_direction": "weirdo_direction_06"
+            "weirdo_direction": "weirdo_direction_00"
         },
         "minecraft:furnace": {
             "facing_direction": "facing_direction_00"
         },
         "minecraft:golden_rail": {
-            "rail_direction": "facing_direction_00"
+            "rail_direction": "rail_direction_00"
         },
         "minecraft:gray_glazed_terracotta": {
             "facing_direction": "facing_direction_00"
@@ -154,7 +154,7 @@
             "facing_direction": "facing_direction_00"
         },
         "minecraft:hay_block": {
-            "direction": "direction_01"
+            "direction": "direction_00"
         },
         "minecraft:hopper": {
             "facing_direction": "facing_direction_00"
@@ -172,10 +172,10 @@
             "facing_direction": "facing_direction_00"
         },
         "minecraft:lava_cauldron": {
-            "fill_level": "fill_level_03"
+            "fill_level": "fill_level_00"
         },
         "minecraft:lever": {
-            "facing_direction": "facing_direction_07"
+            "facing_direction": "facing_direction_01"
         },
         "minecraft:light_blue_glazed_terracotta": {
             "facing_direction": "facing_direction_00"
@@ -193,10 +193,10 @@
             "facing_direction": "facing_direction_00"
         },
         "minecraft:log": {
-            "direction": "direction_08"
+            "direction": "direction_01"
         },
         "minecraft:log2": {
-            "direction": "direction_08"
+            "direction": "direction_01"
         },
         "minecraft:magenta_glazed_terracotta": {
             "facing_direction": "facing_direction_00"
@@ -220,13 +220,13 @@
             "facing_direction": "facing_direction_00"
         },
         "minecraft:purpur_block": {
-            "direction": "direction_01"
+            "direction": "direction_00"
         },
         "minecraft:quartz_block": {
-            "direction": "direction_01"
+            "direction": "direction_00"
         },
         "minecraft:rail": {
-            "rail_direction": "rail_direction_09"
+            "rail_direction": "rail_direction_01"
         },
         "minecraft:red_glazed_terracotta": {
             "facing_direction": "facing_direction_00"
@@ -259,22 +259,22 @@
             "facing_direction": "facing_direction_00"
         },
         "minecraft:stripped_acacia_log": {
-            "direction": "direction_01"
+            "direction": "direction_00"
         },
         "minecraft:stripped_birch_log": {
-            "direction": "direction_01"
+            "direction": "direction_00"
         },
         "minecraft:stripped_dark_oak_log": {
-            "direction": "direction_01"
+            "direction": "direction_00"
         },
         "minecraft:stripped_jungle_log": {
-            "direction": "direction_01"
+            "direction": "direction_00"
         },
         "minecraft:stripped_oak_log": {
-            "direction": "direction_01"
+            "direction": "direction_00"
         },
         "minecraft:stripped_spruce_log": {
-            "direction": "direction_01"
+            "direction": "direction_00"
         },
         "minecraft:trapped_chest": {
             "facing_direction": "facing_direction_00"
@@ -296,17 +296,15 @@
         }
     },
     "remappedPropertyValuesIndex": {
-        "age_04": [
+        "age_00": [
             {
                 "old": {
-                    "int": 3
+                    "int": 6
                 },
                 "new": {
                     "int": 0
                 }
-            }
-        ],
-        "bite_counter_02": [
+            },
             {
                 "old": {
                     "int": 7
@@ -316,7 +314,27 @@
                 }
             }
         ],
-        "composter_fill_level_05": [
+        "age_01": [
+            {
+                "old": {
+                    "int": 3
+                },
+                "new": {
+                    "int": 0
+                }
+            }
+        ],
+        "bite_counter_00": [
+            {
+                "old": {
+                    "int": 7
+                },
+                "new": {
+                    "int": 0
+                }
+            }
+        ],
+        "composter_fill_level_00": [
             {
                 "old": {
                     "int": 10
@@ -374,7 +392,7 @@
                 }
             }
         ],
-        "direction_01": [
+        "direction_00": [
             {
                 "old": {
                     "int": 0
@@ -408,7 +426,7 @@
                 }
             }
         ],
-        "direction_08": [
+        "direction_01": [
             {
                 "old": {
                     "int": 0
@@ -452,7 +470,7 @@
                 }
             }
         ],
-        "facing_direction_07": [
+        "facing_direction_01": [
             {
                 "old": {
                     "int": 0
@@ -518,7 +536,7 @@
                 }
             }
         ],
-        "fill_level_03": [
+        "fill_level_00": [
             {
                 "old": {
                     "int": 7
@@ -528,7 +546,25 @@
                 }
             }
         ],
-        "rail_direction_09": [
+        "rail_direction_00": [
+            {
+                "old": {
+                    "int": 6
+                },
+                "new": {
+                    "int": 0
+                }
+            },
+            {
+                "old": {
+                    "int": 7
+                },
+                "new": {
+                    "int": 0
+                }
+            }
+        ],
+        "rail_direction_01": [
             {
                 "old": {
                     "int": 10
@@ -578,7 +614,7 @@
                 }
             }
         ],
-        "weirdo_direction_06": [
+        "weirdo_direction_00": [
             {
                 "old": {
                     "int": 0
