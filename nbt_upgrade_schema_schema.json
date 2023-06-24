@@ -99,7 +99,8 @@
 						"new": {
 							"$ref": "#/$defs/blockStateProperty"
 						}
-					}
+					},
+					"additionalProperties": false
 				}
 			}
 		},
@@ -131,7 +132,8 @@
 								"type": "string"
 							}
 						}
-					}
+					},
+					"additionalProperties": false
 				}
 			}
 		}
