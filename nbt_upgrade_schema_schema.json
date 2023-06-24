@@ -110,6 +110,11 @@
 				"type": "array",
 				"items": {
 					"type": "object",
+					"required": [
+						"oldState",
+						"newName",
+						"newState"
+					],
 					"properties": {
 						"oldState": {
 							"type": ["object", "null"],
