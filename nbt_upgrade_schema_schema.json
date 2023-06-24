@@ -116,7 +116,7 @@
 								"$ref": "#/$defs/blockStateProperty"
 							}
 						},
-						"newId": {
+						"newName": {
 							"type": "string"
 						},
 						"newState": {
