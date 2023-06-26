@@ -112,8 +112,15 @@
 					"type": "object",
 					"required": [
 						"oldState",
-						"newName",
 						"newState"
+					],
+					"oneOf": [
+						{
+							"required": ["newName"]
+						},
+						{
+							"required": ["newFlattenedName"]
+						}
 					],
 					"properties": {
 						"oldState": {
@@ -124,6 +131,26 @@
 						},
 						"newName": {
 							"type": "string"
+						},
+						"newFlattenedName": {
+							"type": "object",
+							"required": [
+								"prefix",
+								"flattenedProperty",
+								"suffix"
+							],
+							"properties": {
+								"prefix": {
+									"type": "string"
+								},
+								"flattenedProperty": {
+									"type": "string"
+								},
+								"suffix": {
+									"type": "string"
+								}
+							},
+							"additionalProperties": false
 						},
 						"newState": {
 							"type": ["object", "null"],
