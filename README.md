@@ -15,18 +15,26 @@ This JSON file contains a mapping of string ID -> legacy ID for all blocks known
 
 Technically, you'd only need everything up to 1.2.13, but the excess might be handy in some cases.
 
-### `1.12.0_to_1.18.10_blockstate_map.bin`
-This binary file contains a mapping of all known valid 1.12.0 block ID/meta combinations to their corresponding blockstate NBTs as of 1.18.10.
+### `id_meta_to_nbt/*.bin`
+These binary files contain mappings of all known valid ID/meta combinations to their corresponding blockstate NBTs for that version.
+For example, `1.12.0.bin` allows you to convert 1.12.0 ID/meta into 1.12.0 NBTs.
+
+#### Usage
+If you only plan to upgrade worlds to the latest version (1.20.1 at the time of writing), you will only need the 1.12.0 file, which will suffice for upgrading all older blocks (and blockitems) to 1.12 and newer.
+
+However, if you want to upgrade to 1.9, 1.10 or 1.11, you may need the 1.9.0 file in order to upgrade saved blockitems, as 1.9 started to save blockitems using blockstate NBT on disk. The 1.12.0 file won't be suitable for this case, as it contains the NBT blockstates appropriate for 1.12, which will not work on earlier versions.
+
+If you previously used the now-deleted `1.12.0_to_1.18.10_blockstate_map.bin`, you can replace it directly with the `1.12.0.bin`. You will need to upgrade the states within as before.
 
 #### Schema
 The file is structured as described below.
 
 - unsigned varint32 - Number of entries
-  - unsigned varint32 - 1.12 block string ID length
-  - byte[] - 1.12 block string ID
+  - unsigned varint32 - block string ID length
+  - byte[] - block string ID
   - unsigned varint32 - Number of meta -> blockstate pairings
     - unsigned varint32 - Meta value
-    - TAG_Compound (standard little-endian) - 1.18.10 NBT blockstate corresponding to the current ID and meta pair from 1.12.
+    - TAG_Compound (standard little-endian) - NBT blockstate (as of that file's version) corresponding to the ID and meta pair
 
 ## Generating NBT upgrade schemas for new versions
 
