@@ -3,7 +3,7 @@
 
 ## Contents
 ### `nbt_upgrade_schema/*.json`
-These schemas describe how to upgrade blockstate NBT from one version to the next. The structure of the schema is described in `nbt_upgrade_schema_schema.json`. An example implementation can be seen [in PocketMine-MP 5.0.0-ALPHA2](https://github.com/pmmp/PocketMine-MP/blob/ccb3c3cb05e6eee8afa15d7837e256a446244fe7/src/data/bedrock/block/upgrade/BlockStateUpgrader.php#L33).
+These schemas describe how to upgrade blockstate NBT from one version to the next. The structure of the schema is described in `nbt_upgrade_schema_schema.json`. An example implementation can be seen [in PocketMine-MP 5.4.2](https://github.com/pmmp/PocketMine-MP/blob/5.4.2/src/data/bedrock/block/upgrade/BlockStateUpgrader.php#L37).
 
 #### Gotchas
 - Mojang don't always bump the format version when making backwards-incompatible changes. A prominent example of this is in the [`0131_1.18.20.27_beta_to_1.18.30.json`](/nbt_upgrade_schema/0131_1.18.20.27_beta_to_1.18.30.json).
