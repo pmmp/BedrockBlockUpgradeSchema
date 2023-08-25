@@ -12,7 +12,7 @@ These schemas describe how to upgrade blockstate NBT from one version to the nex
   - If a blockstate matches a remap rule, **do not apply any other transformations** (the newly mapped state will be correct for the new version).
   - `oldState` acts as a **search criteria, not an exact match**.
     - Because of this, the remapped state rules must be tested in the order of most criteria to least criteria (this is the order they are provided in by the JSON).
-    - For example, the transformation of `minecraft:concrete` with `silver` colour is different from other colours, as seen in [`0201_1.20.0.23_beta_to_1.20.10.24_beta.json`](https://github.com/pmmp/BedrockBlockUpgradeSchema/blob/0a3c6c337767642148515874ce6b1ebd601866ce/nbt_upgrade_schema/0201_1.20.0.23_beta_to_1.20.10.24_beta.json#L69-L88). If matches were tested in the wrong order, `silver` concrete would be transformed incorrectly.
+    - For example, the transformation of `minecraft:concrete` with `silver` colour is different from other colours, as seen in [`0201_1.20.0.23_beta_to_1.20.10.24_beta.json`](/nbt_upgrade_schema/0201_1.20.0.23_beta_to_1.20.10.24_beta.json#L69-L88). If matches were tested in the wrong order, `silver` concrete would be transformed incorrectly.
 - With the exception of `remappedStates`, modifications can be applied in any order, e.g. `renamedIds` can be applied before or after `renamedProperties`.
   - To facilitate this, `addedProperties`, `renamedProperties`, `removedProperties` and `remappedPropertyValues` always use the old blockID and old property names for indexing.
 
@@ -46,7 +46,7 @@ The file is structured as described below.
 
 First, you need to get a `.bin` mapping file, which you can obtain using the current version of BDS + [pmmp/mapping mod](https://github.com/pmmp/mapping). It requires that you place the palette for the previous version in `input_files/old_block_palettes`.
 
-The output file will be placed in `mapping_files/old_palette_mappings`. This file is then provided as the input for the [schema generator script](https://github.com/pmmp/PocketMine-MP/blob/e98cf39b47c6c37619cae32d2d2596b08f4d938f/tools/generate-blockstate-upgrade-schema.php), which produces the JSON schemas like the ones you see in this repo.
+The output file will be placed in `mapping_files/old_palette_mappings`. This file is then provided as the input for the [schema generator script](https://github.com/pmmp/PocketMine-MP/blob/5.4.2/tools/generate-blockstate-upgrade-schema.php), which produces the JSON schemas like the ones you see in this repo.
 
 Currently the code needed for this is baked into an experimental branch of PocketMine-MP; it's planned to separate it into its own library in the future.
 
