@@ -5,10 +5,12 @@
 ### `nbt_upgrade_schema/*.json`
 These schemas describe how to upgrade blockstate NBT from one version to the next. The structure of the schema is described in `nbt_upgrade_schema_schema.json`. An example implementation can be seen [in PocketMine-MP 5.4.2](https://github.com/pmmp/PocketMine-MP/blob/5.4.2/src/data/bedrock/block/upgrade/BlockStateUpgrader.php#L37).
 
-#### Gotchas
+#### Notes
 - Mojang don't always bump the format version when making backwards-incompatible changes. A prominent example of this is in the [`0131_1.18.20.27_beta_to_1.18.30.json`](/nbt_upgrade_schema/0131_1.18.20.27_beta_to_1.18.30.json).
-- `remappedPropertyValues` always uses the old property name, if the names were changed.
-- `remappedStates` must always be applied first, and in the order given by the JSON. If a blockstate undergoes a state remap, it must not receive any other modifications (the newly mapped state will be correct for the new version).
+- `remappedStates` **must have highest priority**, and must be checked in the order given by the JSON. If a blockstate undergoes a state remap, it **must not receive any other modifications** (the newly mapped state will be correct for the new version).
+- `remappedStates` `oldState` acts as a **search criteria, not an exact match**. Because of this, the remapped state rules must be tested in the order of most criteria to least criteria (this is the order they are provided in by the JSON).
+- With the exception of `remappedStates`, modifications can be applied in any order, e.g. `renamedIds` can be applied before or after `renamedProperties`.
+  - To facilitate this, `addedProperties`, `renamedProperties`, `removedProperties` and `remappedPropertyValues` always use the old blockID and old property names for indexing.
 
 ### `block_legacy_id_map.json`
 This JSON file contains a mapping of string ID -> legacy ID for all blocks known up 1.16.0.
