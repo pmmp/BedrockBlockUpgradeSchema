@@ -7,8 +7,12 @@ These schemas describe how to upgrade blockstate NBT from one version to the nex
 
 #### Notes
 - Mojang don't always bump the format version when making backwards-incompatible changes. A prominent example of this is in the [`0131_1.18.20.27_beta_to_1.18.30.json`](/nbt_upgrade_schema/0131_1.18.20.27_beta_to_1.18.30.json).
-- `remappedStates` **must have highest priority**, and must be checked in the order given by the JSON. If a blockstate undergoes a state remap, it **must not receive any other modifications** (the newly mapped state will be correct for the new version).
-- `remappedStates` `oldState` acts as a **search criteria, not an exact match**. Because of this, the remapped state rules must be tested in the order of most criteria to least criteria (this is the order they are provided in by the JSON).
+- `remappedStates` requires different treatment than other rules:
+  - It **must have highest priority**
+  - If a blockstate matches a remap rule, **do not apply any other transformations** (the newly mapped state will be correct for the new version).
+  - `oldState` acts as a **search criteria, not an exact match**.
+    - Because of this, the remapped state rules must be tested in the order of most criteria to least criteria (this is the order they are provided in by the JSON).
+    - For example, the transformation of `minecraft:concrete` with `silver` colour is different from other colours, as seen in [`0201_1.20.0.23_beta_to_1.20.10.24_beta.json`](https://github.com/pmmp/BedrockBlockUpgradeSchema/blob/0a3c6c337767642148515874ce6b1ebd601866ce/nbt_upgrade_schema/0201_1.20.0.23_beta_to_1.20.10.24_beta.json#L69-L88). If matches were tested in the wrong order, `silver` concrete would be transformed incorrectly.
 - With the exception of `remappedStates`, modifications can be applied in any order, e.g. `renamedIds` can be applied before or after `renamedProperties`.
   - To facilitate this, `addedProperties`, `renamedProperties`, `removedProperties` and `remappedPropertyValues` always use the old blockID and old property names for indexing.
 
