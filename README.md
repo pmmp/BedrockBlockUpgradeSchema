@@ -46,7 +46,7 @@ The file is structured as described below.
 
 First, you need to get a `.bin` mapping file, which you can obtain using the current version of BDS + [pmmp/mapping mod](https://github.com/pmmp/mapping). It requires that you place the palette for the previous version in `input_files/old_block_palettes`.
 
-The output file will be placed in `mapping_files/old_palette_mappings`. This file is then provided as the input for the [schema generator script](https://github.com/pmmp/PocketMine-MP/blob/5.4.2/tools/generate-blockstate-upgrade-schema.php), which produces the JSON schemas like the ones you see in this repo.
+The output file will be placed in `mapping_files/old_palette_mappings`. This file is then provided as the input for the [schema generator script](https://github.com/pmmp/PocketMine-MP/blob/5.8.2/tools/generate-blockstate-upgrade-schema.php), which produces the JSON schemas like the ones you see in this repo.
 
 Currently the code needed for this is baked into an experimental branch of PocketMine-MP; it's planned to separate it into its own library in the future.
 
