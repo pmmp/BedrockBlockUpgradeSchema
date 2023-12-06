@@ -3,7 +3,7 @@
 
 ## Contents
 ### `nbt_upgrade_schema/*.json`
-These schemas describe how to upgrade blockstate NBT from one version to the next. The structure of the schema is described in `nbt_upgrade_schema_schema.json`. An example implementation can be seen [in PocketMine-MP 5.4.2](https://github.com/pmmp/PocketMine-MP/blob/5.4.2/src/data/bedrock/block/upgrade/BlockStateUpgrader.php#L37).
+These schemas describe how to upgrade blockstate NBT from one version to the next. The structure of the schema is described in `nbt_upgrade_schema_schema.json`. An example implementation can be seen [in PocketMine-MP 5.8.2](https://github.com/pmmp/PocketMine-MP/blob/5.8.2/src/data/bedrock/block/upgrade/BlockStateUpgrader.php).
 
 #### Notes
 - Mojang don't always bump the format version when making backwards-incompatible changes. A prominent example of this is in the [`0131_1.18.20.27_beta_to_1.18.30.json`](/nbt_upgrade_schema/0131_1.18.20.27_beta_to_1.18.30.json).
@@ -46,7 +46,7 @@ The file is structured as described below.
 
 First, you need to get a `.bin` mapping file, which you can obtain using the current version of BDS + [pmmp/mapping mod](https://github.com/pmmp/mapping). It requires that you place the palette for the previous version in `input_files/old_block_palettes`.
 
-The output file will be placed in `mapping_files/old_palette_mappings`. This file is then provided as the input for the [schema generator script](https://github.com/pmmp/PocketMine-MP/blob/5.4.2/tools/generate-blockstate-upgrade-schema.php), which produces the JSON schemas like the ones you see in this repo.
+The output file will be placed in `mapping_files/old_palette_mappings`. This file is then provided as the input for the [schema generator script](https://github.com/pmmp/PocketMine-MP/blob/5.8.2/tools/generate-blockstate-upgrade-schema.php), which produces the JSON schemas like the ones you see in this repo.
 
 Currently the code needed for this is baked into an experimental branch of PocketMine-MP; it's planned to separate it into its own library in the future.
 
