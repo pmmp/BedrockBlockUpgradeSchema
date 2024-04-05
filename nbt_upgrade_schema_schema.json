@@ -148,6 +148,12 @@
 								},
 								"suffix": {
 									"type": "string"
+								},
+								"flattenedValueRemaps": {
+									"type": "object",
+									"additionalProperties": {
+										"type": "string"
+									}
 								}
 							},
 							"additionalProperties": false
