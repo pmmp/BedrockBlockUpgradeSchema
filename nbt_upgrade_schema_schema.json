@@ -146,6 +146,10 @@
 								"flattenedProperty": {
 									"type": "string"
 								},
+								"flattenedPropertyType": {
+									"type": "string",
+									"enum": ["int", "string", "byte"]
+								},
 								"suffix": {
 									"type": "string"
 								},

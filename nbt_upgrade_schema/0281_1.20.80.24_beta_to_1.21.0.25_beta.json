@@ -98,39 +98,17 @@
         ],
         "minecraft:tallgrass": [
             {
-                "oldState": {
-                    "tall_grass_type": {
-                        "string": "default"
+                "oldState": null,
+                "newFlattenedName": {
+                    "prefix": "minecraft:",
+                    "flattenedProperty": "tall_grass_type",
+                    "suffix": "",
+                    "flattenedValueRemaps": {
+                        "default": "short_grass",
+                        "snow": "fern",
+                        "tall": "short_grass"
                     }
                 },
-                "newName": "minecraft:short_grass",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "tall_grass_type": {
-                        "string": "fern"
-                    }
-                },
-                "newName": "minecraft:fern",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "tall_grass_type": {
-                        "string": "snow"
-                    }
-                },
-                "newName": "minecraft:fern",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "tall_grass_type": {
-                        "string": "tall"
-                    }
-                },
-                "newName": "minecraft:short_grass",
                 "newState": null
             }
         ]
