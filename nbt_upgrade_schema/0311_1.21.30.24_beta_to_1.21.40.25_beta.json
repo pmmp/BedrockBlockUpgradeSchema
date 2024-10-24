@@ -23,11 +23,10 @@
                     }
                 },
                 "newName": "minecraft:mushroom_stem",
-                "newState": {
-                    "huge_mushroom_bits": {
-                        "int": 10
-                    }
-                }
+                "newState": null,
+                "copiedState": [
+                    "huge_mushroom_bits"
+                ]
             },
             {
                 "oldState": {
@@ -36,11 +35,10 @@
                     }
                 },
                 "newName": "minecraft:mushroom_stem",
-                "newState": {
-                    "huge_mushroom_bits": {
-                        "int": 15
-                    }
-                }
+                "newState": null,
+                "copiedState": [
+                    "huge_mushroom_bits"
+                ]
             },
             {
                 "oldState": null,
@@ -59,11 +57,10 @@
                     }
                 },
                 "newName": "minecraft:mushroom_stem",
-                "newState": {
-                    "huge_mushroom_bits": {
-                        "int": 10
-                    }
-                }
+                "newState": null,
+                "copiedState": [
+                    "huge_mushroom_bits"
+                ]
             },
             {
                 "oldState": {
@@ -72,11 +69,10 @@
                     }
                 },
                 "newName": "minecraft:mushroom_stem",
-                "newState": {
-                    "huge_mushroom_bits": {
-                        "int": 15
-                    }
-                }
+                "newState": null,
+                "copiedState": [
+                    "huge_mushroom_bits"
+                ]
             },
             {
                 "oldState": null,
