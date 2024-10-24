@@ -46,24 +46,18 @@
         ],
         "minecraft:colored_torch_bp": [
             {
-                "oldState": {
-                    "color_bit": {
-                        "byte": 0
+                "oldState": null,
+                "newFlattenedName": {
+                    "prefix": "minecraft:colored_torch_",
+                    "flattenedProperty": "color_bit",
+                    "flattenedPropertyType": "byte",
+                    "suffix": "",
+                    "flattenedValueRemaps": {
+                        "0": "blue",
+                        "1": "purple",
+                        "dummy": "map_not_list"
                     }
                 },
-                "newName": "minecraft:colored_torch_blue",
-                "newState": null,
-                "copiedState": [
-                    "torch_facing_direction"
-                ]
-            },
-            {
-                "oldState": {
-                    "color_bit": {
-                        "byte": 1
-                    }
-                },
-                "newName": "minecraft:colored_torch_purple",
                 "newState": null,
                 "copiedState": [
                     "torch_facing_direction"
@@ -72,24 +66,18 @@
         ],
         "minecraft:colored_torch_rg": [
             {
-                "oldState": {
-                    "color_bit": {
-                        "byte": 0
+                "oldState": null,
+                "newFlattenedName": {
+                    "prefix": "minecraft:colored_torch_",
+                    "flattenedProperty": "color_bit",
+                    "flattenedPropertyType": "byte",
+                    "suffix": "",
+                    "flattenedValueRemaps": {
+                        "0": "red",
+                        "1": "green",
+                        "dummy": "map_not_list"
                     }
                 },
-                "newName": "minecraft:colored_torch_red",
-                "newState": null,
-                "copiedState": [
-                    "torch_facing_direction"
-                ]
-            },
-            {
-                "oldState": {
-                    "color_bit": {
-                        "byte": 1
-                    }
-                },
-                "newName": "minecraft:colored_torch_green",
                 "newState": null,
                 "copiedState": [
                     "torch_facing_direction"
@@ -133,24 +121,18 @@
         ],
         "minecraft:tnt": [
             {
-                "oldState": {
-                    "allow_underwater_bit": {
-                        "byte": 0
+                "oldState": null,
+                "newFlattenedName": {
+                    "prefix": "minecraft:",
+                    "flattenedProperty": "allow_underwater_bit",
+                    "flattenedPropertyType": "byte",
+                    "suffix": "tnt",
+                    "flattenedValueRemaps": {
+                        "0": "",
+                        "1": "underwater_",
+                        "dummy": "map_not_list"
                     }
                 },
-                "newName": "minecraft:tnt",
-                "newState": null,
-                "copiedState": [
-                    "explode_bit"
-                ]
-            },
-            {
-                "oldState": {
-                    "allow_underwater_bit": {
-                        "byte": 1
-                    }
-                },
-                "newName": "minecraft:underwater_tnt",
                 "newState": null,
                 "copiedState": [
                     "explode_bit"

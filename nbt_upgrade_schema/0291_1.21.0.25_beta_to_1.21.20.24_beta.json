@@ -30,14 +30,21 @@
         "minecraft:coral_fan_hang": [
             {
                 "oldState": {
-                    "coral_hang_type_bit": {
-                        "byte": 0
-                    },
                     "dead_bit": {
                         "byte": 0
                     }
                 },
-                "newName": "minecraft:tube_coral_wall_fan",
+                "newFlattenedName": {
+                    "prefix": "minecraft:",
+                    "flattenedProperty": "coral_hang_type_bit",
+                    "flattenedPropertyType": "byte",
+                    "suffix": "_coral_wall_fan",
+                    "flattenedValueRemaps": {
+                        "0": "tube",
+                        "1": "brain",
+                        "dummy": "map_not_list"
+                    }
+                },
                 "newState": null,
                 "copiedState": [
                     "coral_direction"
@@ -45,44 +52,21 @@
             },
             {
                 "oldState": {
-                    "coral_hang_type_bit": {
-                        "byte": 0
-                    },
                     "dead_bit": {
                         "byte": 1
                     }
                 },
-                "newName": "minecraft:dead_tube_coral_wall_fan",
-                "newState": null,
-                "copiedState": [
-                    "coral_direction"
-                ]
-            },
-            {
-                "oldState": {
-                    "coral_hang_type_bit": {
-                        "byte": 1
-                    },
-                    "dead_bit": {
-                        "byte": 0
+                "newFlattenedName": {
+                    "prefix": "minecraft:dead_",
+                    "flattenedProperty": "coral_hang_type_bit",
+                    "flattenedPropertyType": "byte",
+                    "suffix": "_coral_wall_fan",
+                    "flattenedValueRemaps": {
+                        "0": "tube",
+                        "1": "brain",
+                        "dummy": "map_not_list"
                     }
                 },
-                "newName": "minecraft:brain_coral_wall_fan",
-                "newState": null,
-                "copiedState": [
-                    "coral_direction"
-                ]
-            },
-            {
-                "oldState": {
-                    "coral_hang_type_bit": {
-                        "byte": 1
-                    },
-                    "dead_bit": {
-                        "byte": 1
-                    }
-                },
-                "newName": "minecraft:dead_brain_coral_wall_fan",
                 "newState": null,
                 "copiedState": [
                     "coral_direction"
@@ -92,14 +76,21 @@
         "minecraft:coral_fan_hang2": [
             {
                 "oldState": {
-                    "coral_hang_type_bit": {
-                        "byte": 0
-                    },
                     "dead_bit": {
                         "byte": 0
                     }
                 },
-                "newName": "minecraft:bubble_coral_wall_fan",
+                "newFlattenedName": {
+                    "prefix": "minecraft:",
+                    "flattenedProperty": "coral_hang_type_bit",
+                    "flattenedPropertyType": "byte",
+                    "suffix": "e_coral_wall_fan",
+                    "flattenedValueRemaps": {
+                        "0": "bubbl",
+                        "1": "fir",
+                        "dummy": "map_not_list"
+                    }
+                },
                 "newState": null,
                 "copiedState": [
                     "coral_direction"
@@ -107,44 +98,21 @@
             },
             {
                 "oldState": {
-                    "coral_hang_type_bit": {
-                        "byte": 0
-                    },
                     "dead_bit": {
                         "byte": 1
                     }
                 },
-                "newName": "minecraft:dead_bubble_coral_wall_fan",
-                "newState": null,
-                "copiedState": [
-                    "coral_direction"
-                ]
-            },
-            {
-                "oldState": {
-                    "coral_hang_type_bit": {
-                        "byte": 1
-                    },
-                    "dead_bit": {
-                        "byte": 0
+                "newFlattenedName": {
+                    "prefix": "minecraft:dead_",
+                    "flattenedProperty": "coral_hang_type_bit",
+                    "flattenedPropertyType": "byte",
+                    "suffix": "e_coral_wall_fan",
+                    "flattenedValueRemaps": {
+                        "0": "bubbl",
+                        "1": "fir",
+                        "dummy": "map_not_list"
                     }
                 },
-                "newName": "minecraft:fire_coral_wall_fan",
-                "newState": null,
-                "copiedState": [
-                    "coral_direction"
-                ]
-            },
-            {
-                "oldState": {
-                    "coral_hang_type_bit": {
-                        "byte": 1
-                    },
-                    "dead_bit": {
-                        "byte": 1
-                    }
-                },
-                "newName": "minecraft:dead_fire_coral_wall_fan",
                 "newState": null,
                 "copiedState": [
                     "coral_direction"
@@ -156,42 +124,19 @@
                 "oldState": {
                     "coral_hang_type_bit": {
                         "byte": 0
-                    },
-                    "dead_bit": {
-                        "byte": 0
                     }
                 },
-                "newName": "minecraft:horn_coral_wall_fan",
-                "newState": null,
-                "copiedState": [
-                    "coral_direction"
-                ]
-            },
-            {
-                "oldState": {
-                    "coral_hang_type_bit": {
-                        "byte": 0
-                    },
-                    "dead_bit": {
-                        "byte": 1
+                "newFlattenedName": {
+                    "prefix": "minecraft:",
+                    "flattenedProperty": "dead_bit",
+                    "flattenedPropertyType": "byte",
+                    "suffix": "horn_coral_wall_fan",
+                    "flattenedValueRemaps": {
+                        "0": "",
+                        "1": "dead_",
+                        "dummy": "map_not_list"
                     }
                 },
-                "newName": "minecraft:dead_horn_coral_wall_fan",
-                "newState": null,
-                "copiedState": [
-                    "coral_direction"
-                ]
-            },
-            {
-                "oldState": {
-                    "coral_hang_type_bit": {
-                        "byte": 1
-                    },
-                    "dead_bit": {
-                        "byte": 0
-                    }
-                },
-                "newName": "minecraft:horn_coral_wall_fan",
                 "newState": null,
                 "copiedState": [
                     "coral_direction"
@@ -201,12 +146,19 @@
                 "oldState": {
                     "coral_hang_type_bit": {
                         "byte": 1
-                    },
-                    "dead_bit": {
-                        "byte": 1
                     }
                 },
-                "newName": "minecraft:dead_horn_coral_wall_fan",
+                "newFlattenedName": {
+                    "prefix": "minecraft:",
+                    "flattenedProperty": "dead_bit",
+                    "flattenedPropertyType": "byte",
+                    "suffix": "horn_coral_wall_fan",
+                    "flattenedValueRemaps": {
+                        "0": "",
+                        "1": "dead_",
+                        "dummy": "map_not_list"
+                    }
+                },
                 "newState": null,
                 "copiedState": [
                     "coral_direction"
@@ -296,147 +248,13 @@
         ],
         "minecraft:light_block": [
             {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 0
-                    }
+                "oldState": null,
+                "newFlattenedName": {
+                    "prefix": "minecraft:light_block_",
+                    "flattenedProperty": "block_light_level",
+                    "flattenedPropertyType": "int",
+                    "suffix": ""
                 },
-                "newName": "minecraft:light_block_0",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 10
-                    }
-                },
-                "newName": "minecraft:light_block_10",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 11
-                    }
-                },
-                "newName": "minecraft:light_block_11",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 12
-                    }
-                },
-                "newName": "minecraft:light_block_12",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 13
-                    }
-                },
-                "newName": "minecraft:light_block_13",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 14
-                    }
-                },
-                "newName": "minecraft:light_block_14",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 15
-                    }
-                },
-                "newName": "minecraft:light_block_15",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 1
-                    }
-                },
-                "newName": "minecraft:light_block_1",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 2
-                    }
-                },
-                "newName": "minecraft:light_block_2",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 3
-                    }
-                },
-                "newName": "minecraft:light_block_3",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 4
-                    }
-                },
-                "newName": "minecraft:light_block_4",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 5
-                    }
-                },
-                "newName": "minecraft:light_block_5",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 6
-                    }
-                },
-                "newName": "minecraft:light_block_6",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 7
-                    }
-                },
-                "newName": "minecraft:light_block_7",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 8
-                    }
-                },
-                "newName": "minecraft:light_block_8",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "block_light_level": {
-                        "int": 9
-                    }
-                },
-                "newName": "minecraft:light_block_9",
                 "newState": null
             }
         ],
@@ -593,48 +411,19 @@
         ],
         "minecraft:stonebrick": [
             {
-                "oldState": {
-                    "stone_brick_type": {
-                        "string": "chiseled"
+                "oldState": null,
+                "newFlattenedName": {
+                    "prefix": "minecraft:",
+                    "flattenedProperty": "stone_brick_type",
+                    "suffix": "stone_bricks",
+                    "flattenedValueRemaps": {
+                        "chiseled": "chiseled_",
+                        "cracked": "cracked_",
+                        "default": "",
+                        "mossy": "mossy_",
+                        "smooth": ""
                     }
                 },
-                "newName": "minecraft:chiseled_stone_bricks",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "stone_brick_type": {
-                        "string": "cracked"
-                    }
-                },
-                "newName": "minecraft:cracked_stone_bricks",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "stone_brick_type": {
-                        "string": "default"
-                    }
-                },
-                "newName": "minecraft:stone_bricks",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "stone_brick_type": {
-                        "string": "mossy"
-                    }
-                },
-                "newName": "minecraft:mossy_stone_bricks",
-                "newState": null
-            },
-            {
-                "oldState": {
-                    "stone_brick_type": {
-                        "string": "smooth"
-                    }
-                },
-                "newName": "minecraft:stone_bricks",
                 "newState": null
             }
         ]
