@@ -17,6 +17,36 @@
 					"type": "integer"
 				}
 			}
+		},
+		"flattenRule": {
+			"type": "object",
+			"required": [
+				"prefix",
+				"flattenedProperty",
+				"suffix"
+			],
+			"properties": {
+				"prefix": {
+					"type": "string"
+				},
+				"flattenedProperty": {
+					"type": "string"
+				},
+				"flattenedPropertyType": {
+					"type": "string",
+					"enum": ["int", "string", "byte"]
+				},
+				"suffix": {
+					"type": "string"
+				},
+				"flattenedValueRemaps": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalProperties": false
 		}
 	},
 	"type": "object",
@@ -104,6 +134,12 @@
 				}
 			}
 		},
+		"flattenedProperties": {
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "#/$defs/flattenRule"
+			}
+		},
 		"remappedStates": {
 			"type": "object",
 			"additionalProperties": {
@@ -133,30 +169,7 @@
 							"type": "string"
 						},
 						"newFlattenedName": {
-							"type": "object",
-							"required": [
-								"prefix",
-								"flattenedProperty",
-								"suffix"
-							],
-							"properties": {
-								"prefix": {
-									"type": "string"
-								},
-								"flattenedProperty": {
-									"type": "string"
-								},
-								"suffix": {
-									"type": "string"
-								},
-								"flattenedValueRemaps": {
-									"type": "object",
-									"additionalProperties": {
-										"type": "string"
-									}
-								}
-							},
-							"additionalProperties": false
+							"$ref": "#/$defs/flattenRule"
 						},
 						"newState": {
 							"type": ["object", "null"],
