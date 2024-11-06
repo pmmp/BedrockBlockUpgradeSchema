@@ -1,6 +1,25 @@
 # BlockStateUpgradeSchema
 JSON schemas and other data needed for upgrading blockstates found in older Minecraft: Bedrock worlds
 
+## Motivation
+
+Since Minecraft Bedrock doesn't auto-upgrade terrain or inventories unless they've been loaded during a game session, any software that supports Minecraft Bedrock worlds has to accommodate all of the old blockstates all the way back to the first versions that used them, and many backwards-incompatible changes were made since then.
+If they do not, they may randomly fail to load chunks in older worlds that work just fine in latest Bedrock.
+
+Projects such as [CloudburstMC/BlockStateUpdater](https://github.com/CloudburstMC/BlockStateUpdater) solve this with code. However, this approach has several disadvantages:
+- Non-portable - can't be used by a non-JVM language
+- Relies on manual analysis of the Minecraft server binary
+- Created manually by humans, which is naturally an error-prone process
+- Some changes may be missed (especially those which Minecraft itself doesn't account for, e.g. the addition of `item_frame_photo_bit`)
+
+This project instead provides data that describes how to upgrade without binding the information to any particular language.
+
+It has the following advantages:
+- Not bound to any language, interpreter or project
+- Data quality is at least as good as Bedrock's own, due to being generated from information created by BDS (and amended manually where Mojang themselves made mistakes)
+- All changes are accounted for, including those which aren't obvious from analysing the game code
+- No dependent code changes required to support new Minecraft versions - just bumping your required version of BedrockBlockUpgradeSchema
+
 ## `nbt_upgrade_schema/*.json`
 These schemas describe how to upgrade blockstate NBT from one version to the next. The structure of the schema is described in `nbt_upgrade_schema_schema.json`. An example implementation can be seen [in PocketMine-MP 5.21.0](https://github.com/pmmp/PocketMine-MP/blob/5.21.0/src/data/bedrock/block/upgrade/BlockStateUpgrader.php).
 
@@ -51,22 +70,3 @@ The file is structured as described below.
   - unsigned varint32 - Number of meta -> blockstate pairings
     - unsigned varint32 - Meta value
     - TAG_Compound (standard little-endian) - NBT blockstate (as of that file's version) corresponding to the ID and meta pair
-
-## Background
-
-Since Minecraft Bedrock doesn't auto-upgrade terrain or inventories unless they've been loaded during a game session, any software that supports Minecraft Bedrock worlds has to accommodate all of the old blockstates all the way back to the first versions that used them, and many backwards-incompatible changes were made since then.
-If they do not, they may randomly fail to load chunks in older worlds that work just fine in latest Bedrock.
-
-Projects such as [CloudburstMC/BlockStateUpdater](https://github.com/CloudburstMC/BlockStateUpdater) solve this with code. However, this approach has several disadvantages:
-- Non-portable - can't be used by a non-JVM language
-- Relies on manual analysis of the Minecraft server binary
-- Created manually by humans, which is naturally an error-prone process
-- Some changes may be missed (especially those which Minecraft itself doesn't account for, e.g. the addition of `item_frame_photo_bit`)
-
-This project instead provides data that describes how to upgrade without binding the information to any particular language.
-
-It has the following advantages:
-- Not bound to any language, interpreter or project
-- Data quality is at least as good as Bedrock's own, due to being generated from information created by BDS (and amended manually where Mojang themselves made mistakes)
-- All changes are accounted for, including those which aren't obvious from analysing the game code
-- No dependent code changes required to support new Minecraft versions - just bumping your required version of BedrockBlockUpgradeSchema
