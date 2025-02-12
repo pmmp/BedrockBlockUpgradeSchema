@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "nbt_upgrade_schema/**"
+  workflow_dispatch:
 
 jobs:
   build:
