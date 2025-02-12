@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  generate:
     
     runs-on: ubuntu-latest
     env:
@@ -37,7 +37,7 @@ jobs:
         jq '.' $OUTPUT_FILE > temp && mv temp $OUTPUT_FILE
         echo "Schema directory saved to $OUTPUT_FILE"
 
-    - name: Commit image
+    - name: Commit
       uses: EndBug/add-and-commit@v9.1.4
       with:
         add: '${{ env.OUTPUT_FILE }}'
