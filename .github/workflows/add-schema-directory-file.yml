@@ -1,0 +1,44 @@
+name: Add schema directory file
+
+on:
+  push:
+    paths:
+      - "nbt_upgrade_schema/**"
+
+jobs:
+  build:
+    
+    runs-on: ubuntu-latest
+    env:
+      OUTPUT_FILE: schema_list.json
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Add schema directory file
+      run: |
+        echo -n "[" > "$OUTPUT_FILE"
+        FIRST=true
+        for file in nbt_upgrade_schema/*.json; do
+          filename=$(basename "$file")
+          maxVersionMajor=$(jq -r '.maxVersionMajor' "$file")
+          maxVersionMinor=$(jq -r '.maxVersionMinor' "$file")
+          maxVersionPatch=$(jq -r '.maxVersionPatch' "$file")
+          maxVersionRevision=$(jq -r '.maxVersionRevision' "$file")
+          
+          if [ "$FIRST" = true ]; then
+            FIRST=false
+          else
+            echo -n "," >> "$OUTPUT_FILE"
+          fi
+          echo -n "{\"filename\":\"$filename\",\"maxVersionMajor\":$maxVersionMajor,\"maxVersionMinor\":$maxVersionMinor,\"maxVersionPatch\":$maxVersionPatch,\"maxVersionRevision\":$maxVersionRevision}" >> "$OUTPUT_FILE"
+        done
+        echo  -n "]" >> "$OUTPUT_FILE"
+        jq '.' $OUTPUT_FILE > temp && mv temp $OUTPUT_FILE
+        echo "Schema directory saved to $OUTPUT_FILE"
+
+    - name: Commit image
+      uses: EndBug/add-and-commit@v9.1.4
+      with:
+        add: '${{ env.OUTPUT_FILE }}'
+        default_author: github_actions
+        message: "Update schema directory file"
