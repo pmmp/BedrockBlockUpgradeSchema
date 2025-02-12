@@ -1,0 +1,233 @@
+[
+  {
+    "filename": "0001_1.9.0_to_1.10.0.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 10,
+    "maxVersionPatch": 0,
+    "maxVersionRevision": 50
+  },
+  {
+    "filename": "0011_1.10.0_to_1.12.0.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 12,
+    "maxVersionPatch": 0,
+    "maxVersionRevision": 1
+  },
+  {
+    "filename": "0021_1.12.0_to_1.13.0.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 14,
+    "maxVersionPatch": 0,
+    "maxVersionRevision": 3
+  },
+  {
+    "filename": "0031_1.13.0_to_1.14.0.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 15,
+    "maxVersionPatch": 0,
+    "maxVersionRevision": 0
+  },
+  {
+    "filename": "0041_1.14.0_to_1.16.0.57_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 16,
+    "maxVersionPatch": 0,
+    "maxVersionRevision": 0
+  },
+  {
+    "filename": "0051_1.16.0.57_beta_to_1.16.0.59_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 16,
+    "maxVersionPatch": 0,
+    "maxVersionRevision": 9
+  },
+  {
+    "filename": "0061_1.16.0.59_beta_to_1.16.0.68_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 16,
+    "maxVersionPatch": 0,
+    "maxVersionRevision": 14
+  },
+  {
+    "filename": "0071_1.16.0_to_1.16.100.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 16,
+    "maxVersionPatch": 0,
+    "maxVersionRevision": 16
+  },
+  {
+    "filename": "0081_1.16.200_to_1.16.210.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 16,
+    "maxVersionPatch": 210,
+    "maxVersionRevision": 3
+  },
+  {
+    "filename": "0091_1.17.10_to_1.17.30.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 16,
+    "maxVersionPatch": 210,
+    "maxVersionRevision": 3
+  },
+  {
+    "filename": "0101_1.17.30_to_1.17.40.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 16,
+    "maxVersionPatch": 210,
+    "maxVersionRevision": 3
+  },
+  {
+    "filename": "0111_1.18.0_to_1.18.10.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 18,
+    "maxVersionPatch": 10,
+    "maxVersionRevision": 1
+  },
+  {
+    "filename": "0121_1.18.10_to_1.18.20.27_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 18,
+    "maxVersionPatch": 10,
+    "maxVersionRevision": 1
+  },
+  {
+    "filename": "0131_1.18.20.27_beta_to_1.18.30.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 18,
+    "maxVersionPatch": 10,
+    "maxVersionRevision": 1
+  },
+  {
+    "filename": "0141_1.18.30_to_1.19.0.34_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 18,
+    "maxVersionPatch": 10,
+    "maxVersionRevision": 1
+  },
+  {
+    "filename": "0151_1.19.0.34_beta_to_1.19.20.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 18,
+    "maxVersionPatch": 10,
+    "maxVersionRevision": 1
+  },
+  {
+    "filename": "0161_1.19.50_to_1.19.60.26_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 18,
+    "maxVersionPatch": 10,
+    "maxVersionRevision": 1
+  },
+  {
+    "filename": "0171_1.19.60_to_1.19.70.26_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 19,
+    "maxVersionPatch": 70,
+    "maxVersionRevision": 15
+  },
+  {
+    "filename": "0181_1.19.70_to_1.19.80.24_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 19,
+    "maxVersionPatch": 80,
+    "maxVersionRevision": 11
+  },
+  {
+    "filename": "0191_1.19.80.24_beta_to_1.20.0.23_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 20,
+    "maxVersionPatch": 0,
+    "maxVersionRevision": 33
+  },
+  {
+    "filename": "0201_1.20.0.23_beta_to_1.20.10.24_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 20,
+    "maxVersionPatch": 10,
+    "maxVersionRevision": 32
+  },
+  {
+    "filename": "0211_1.20.10.24_beta_to_1.20.20.23_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 20,
+    "maxVersionPatch": 20,
+    "maxVersionRevision": 89
+  },
+  {
+    "filename": "0221_1.20.20.23_beta_to_1.20.30.22_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 20,
+    "maxVersionPatch": 30,
+    "maxVersionRevision": 50
+  },
+  {
+    "filename": "0231_1.20.30.22_beta_to_1.20.40.24_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 20,
+    "maxVersionPatch": 40,
+    "maxVersionRevision": 3
+  },
+  {
+    "filename": "0241_1.20.40.24_beta_to_1.20.50.23_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 20,
+    "maxVersionPatch": 50,
+    "maxVersionRevision": 1
+  },
+  {
+    "filename": "0251_1.20.50.23_beta_to_1.20.60.26_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 20,
+    "maxVersionPatch": 60,
+    "maxVersionRevision": 1
+  },
+  {
+    "filename": "0261_1.20.60.26_beta_to_1.20.70.24_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 20,
+    "maxVersionPatch": 70,
+    "maxVersionRevision": 4
+  },
+  {
+    "filename": "0271_1.20.70.24_beta_to_1.20.80.24_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 20,
+    "maxVersionPatch": 80,
+    "maxVersionRevision": 3
+  },
+  {
+    "filename": "0281_1.20.80.24_beta_to_1.21.0.25_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 21,
+    "maxVersionPatch": 0,
+    "maxVersionRevision": 3
+  },
+  {
+    "filename": "0291_1.21.0.25_beta_to_1.21.20.24_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 21,
+    "maxVersionPatch": 20,
+    "maxVersionRevision": 6
+  },
+  {
+    "filename": "0301_1.21.20.24_beta_to_1.21.30.24_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 21,
+    "maxVersionPatch": 30,
+    "maxVersionRevision": 7
+  },
+  {
+    "filename": "0311_1.21.30.24_beta_to_1.21.40.25_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 21,
+    "maxVersionPatch": 40,
+    "maxVersionRevision": 1
+  },
+  {
+    "filename": "0321_1.21.40.25_beta_to_1.21.60.28_beta.json",
+    "maxVersionMajor": 1,
+    "maxVersionMinor": 21,
+    "maxVersionPatch": 60,
+    "maxVersionRevision": 33
+  }
+]
