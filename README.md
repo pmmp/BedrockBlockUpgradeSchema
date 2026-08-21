@@ -35,15 +35,18 @@ These schemas describe how to upgrade blockstate NBT from one version to the nex
 
 ### How are new schemas created?
 
-#### Generated from data
-First, you need to get a `.bin` mapping table file, which you can obtain using the current version of BDS + [pmmp/bds-mod-mapping](https://github.com/pmmp/bds-mod-mapping). The mod creates these files by feeding old block palettes into BDS, and outputting a pairing of every blockstate from the respective old palette to its upgraded counterpart. The output files will be placed in `mapping_files/old_palette_mappings`.
+There are several ways to do this, depending on what kind of resources you have available.
 
-A mapping table file is then given to PocketMine-MP's [schema generator script](https://github.com/pmmp/PocketMine-MP/blob/stable/tools/blockstate-upgrade-schema-utils.php). This script analyzes patterns in the upgraded blockstates to calculate what changes were made, and then generates a JSON file like the ones you see in this repo.
+| Description | Special requirements | Automation level | Difficulty |
+|:------------|:---------------------|:-----------------|:-----------|
+| Use a [mod](https://github.com/pmmp/bds-mod-mapping) to feed in an old block palette to BDS, upgrade the NBTs, and spit out a mapping table of old state -> new state to feed into a [schema generator like PMMP's](https://github.com/pmmp/PocketMine-MP/blob/stable/tools/blockstate-upgrade-schema-utils.php) | Debugging symbols on BDS | Fully automatable | Fairly difficult |
+| Use the scripting API to feed in an old palette to BDS, upgrade the NBTs using `BlockPermutation.resolve()`, and spit out a mapping table of old state -> new state to feed into a [schema generator like PMMP's](https://github.com/pmmp/PocketMine-MP/blob/stable/tools/blockstate-upgrade-schema-utils.php) | None, in theory | Fully automatable | Easy?
+| Decompile Minecraft in IDA, Ghidra, etc. and lookup the code for Minecraft's own BlockState upgrader, and reproduce the transformations found there by hand | Debugging symbols, or a ton of patience | Manual | Probably not worth it |
+| Use AI to analyse the Minecraft binary to pull out changes and write a schema based on them | Advanced AI | Mostly automatable, but may not be fully reliable without human review | Easy if you have a way to prove accuracy |
+| Manually compare two block palettes and manually determine how they differ | Patience | Manual | Easy but probably tedious |
+| Copy someone else's work :) | None | Manual | Easy |
 
-*Why not just use the mapping table files directly?* The mapping tables are typically large and contain lots of redundant information, while also being very difficult for humans to analyze and modify. By post-processing the tables, we can extract only the useful information and represent it in a much more compact, human-readable and human-editable way.
-
-#### Written by hand
-Since the schemas are JSON, they can be created and modified by humans. This is useful when Mojang themselves have incorrectly performed upgrades, or if it's not possible to generate a schema for some reason. However, more work will be needed to test and verify correctness.
+The schemas are designed to be human-readable and writable, so if you have no other option but to write one by hand, it should be easy (though perhaps tedious) to do.
 
 #### File name structure
 Every JSON schema has three variables, and is structured like this: `<schemaID>_<oldPaletteVersion>_to_<newPaletteVersion>.json`.
